@@ -15,4 +15,13 @@ let islogedin ="" // False output : " mousam" => true output
 let booleanislogedin = Boolean(islogedin)
 console.log(booleanislogedin);
 
+console.log(1 + "2");
+console.log("1" + 2);
+console.log("1" + 2+2);
+console.log(1 + 2 + "2");
+
+
+
+
+
 
