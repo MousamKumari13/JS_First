@@ -32,3 +32,27 @@ const myfun = function(){ // Function
     
 }
 console.log(typeof myfun); // datatypes = object function
+
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+// stack(primitive) - as copy ,, Heap(non- primitive) - as Reference
+
+let myyoutubename = "mousamkumari@123"
+
+let anothename = myyoutubename
+anothename = "sonusharma@097"
+
+console.log(myyoutubename); // output - mousamkumari@123
+console.log(anothename); // output - sonusharma@097
+
+let userone = {
+     email : "memousam@.com",
+     upi: "pym23"
+
+}
+
+let usertwo = userone
+usertwo.email = "sonu@.com"
+
+console.log(userone.email);//sonu@.com
+console.log(usertwo.email);// sonu@.com
