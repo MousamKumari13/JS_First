@@ -37,3 +37,31 @@ function loginusermsg(username){
 //console.log(loginusermsg("Mousam"));
 console.log(loginusermsg()); // undefined
 
+function calcartprice(...num1){ // ... rest operator
+    return num1
+}
+
+console.log(calcartprice(200,400, 500 , 200));  // [ 200, 400, 500, 200 ]
+
+const user = {
+   username : "Mousam",
+   price : 199
+}
+
+function handleObject(anyObject){
+    console.log(`usernem is ${anyObject.username} ans price is ${anyObject.price}`); // usernem is Mousam ans price is 199
+    
+}
+handleObject(user)
+/*handleObject({
+    username: "Ms",
+    price : 300
+})*/
+
+const mynewarr = [200 , 300 , 400 , 500]
+
+function returnsecondvalue(getarr){
+    return getarr[1];
+}
+
+console.log(returnsecondvalue(mynewarr)); // 300
