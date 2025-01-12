@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>html events</title>
+  </head>
+  <body style="background-color: #414141; color: aliceblue">
+    <h2>Amazing image</h2>
+    <div>
+      <ul id="images">
+        <li>
+          <img
+            width="200px"
+            id="photoshop"
+            src="https://helpx.adobe.com/content/dam/help/en/photoshop/how-to/photoshop-for-beginners/_jcr_content/main-pars/image/photoshop-for-beginners_1800x1012.jpg"
+            alt="photoshop"
+          />
+        </li>
+        <li>
+          <img
+            width="200px"
+            id="japan"
+            src="https://d3e1m60ptf1oym.cloudfront.net/d7de27b3-c9fe-4f1b-a9f3-ca88750115f5/M28265-FR-01_uxga.jpg"
+            alt=""
+          />
+        </li>
+        <li>
+          <img
+            width="200px"
+            id="japan"
+            src="https://d3e1m60ptf1oym.cloudfront.net/d7de27b3-c9fe-4f1b-a9f3-ca88750115f5/M28265-FR-01_uxga.jpg"
+            alt=""
+          />
+        </li>
+        <li>
+          <img
+            width="200px"
+            id="japan"
+            src="https://static.vecteezy.com/system/resources/previews/010/621/918/large_2x/christian-woman-hand-on-holy-bible-are-pray-and-worship-for-thank-god-in-church-with-black-background-concept-for-faith-spirituality-and-religion-free-photo.jpg"
+            alt=""
+          />
+        </li>
+        <li>
+          <a style="color: blue" href="https://google.com" id="google"></a>
+        </li>
+      </ul>
+    </div>
+  </body>
+  <script>
+    //document.getElementById('owl').oneclick = function(){
+    //alert("owl clicked")
+    //}
+    //attachEvent()
+    // jQuery - on
+    //type , timestamp , defaultPrevented
+    //target , toElement ,srcElement , currentTarget,
+    //clinetx, clientY , screenx , screenY
+    //altkey,ctrkey,shiftkey ,keycode
+
+    // document.getElementById("images").addEventListener(
+    // "click",
+    //function (e) {
+    //console.log("clicked inside the ul");
+    //},
+    //false
+    //);
+    //document.getElementById("owl").addEventListener(
+    //"click",
+    //function (e) {
+    //console.log("clicked inside the ul");
+    //e.stopPropagation();
+    //},
+    //false
+    //);
+
+    //document.getElementById("google").addEventListener(
+    // "click",
+    //function (e) {
+    // e.preventDefault();
+    // e.stopPropagation();
+    // console.log("google clicked");
+    //},
+    //false
+    //);
+
+    document.querySelector("#images").addEventListener("click", function (e) {
+      console.log(e.target.tagName);
+      if (e.target.tagName === "IMG") {
+        console.log(e.target.id);
+        let removeIt = e.target.parentNode;
+        removeIt.remove();
+      }
+    });
+  </script>
+</html>
